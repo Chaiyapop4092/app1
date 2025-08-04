@@ -1,9 +1,9 @@
 import './App.css';
 import React from 'react';
-import { Calculator2 } from './func-components';
+import { Calculator2, EventData2 } from './func-components';
 
 function App() {
-  return <Calculator2/>
+  return <EventData2/>
 }
 
 export default App;
