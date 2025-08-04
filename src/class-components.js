@@ -1,23 +1,16 @@
-import React, {Component} from 'react'
-export default class Calendar extends Component {
-    getDate() {
-        const dayNames = ['อาทิตย์', 'จันทร์', 'อังคาร', 'พุธ', 'พฤหัสบดี', 'ศุกร์', 
-                          'เสาร์']
+import React, { Component } from 'react';
 
-        const monthNames = ['มกราคม', 'กุมภาพันธ์', 'มีนาคม', 'เมษายน',
-                            'พฤษภาคม', 'มิถุนายน', 'กรกฎาคม', 'สิงหาคม', 
-                            'กันยนยน', 'ตุลาคม','พฤศจิกายน', 'ธันวาคม']
+export default class Button extends Component {
+    showAlert(msg) {
+        alert(msg);
+    }
 
-        const date = new Date()
-        const weekDay = dayNames[date.getDay()]
-        const day = date.getDate()
-        const month = monthNames[date.getMonth()]
-        const year = date.getFullYear() + 543
+    onClickButtonOK = () => {
+        // Event Handler แบบ Arrow Function
+        this.showAlert('Hello'); // ใช้ this ได้เลย โดยไม่เกิดปัญหา
+    }
 
-        return `วัน${weekDay} ที่ ${day} ${month} ${year}`
-    }// alt + 96 for backtick `
-        
     render() {
-        return <div>{this.getDate()}</div>
+        return <button onClick={this.onClickButtonOK}>OK</button>;
     }
 }
