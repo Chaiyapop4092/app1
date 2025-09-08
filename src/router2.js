@@ -5,7 +5,6 @@ export default function Router2() {
     return (
         <BrowserRouter>
             <nav className="nav">
-                react/app1/src/router2.js
                 <NavLink to='/'
                     className={({ isActive }) =>
                         isActive ? "active_menu" : "menu"}
